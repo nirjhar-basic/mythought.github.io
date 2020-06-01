@@ -80,7 +80,7 @@
   </div>
   
     <div><h3 style="padding:10px"> OOPs Concept</h3>
-     <ul>
+    <ul>
   <li ><a href="oops.html" >OOPs Concept</a></li>
   <li ><a href="constructor.html">Constructor</a></li>
   <li ><a href="static.html">Static keyword</a></li>
@@ -128,74 +128,63 @@
   </div>
   <div class="middlepane" >
 <div>
-<h2 style="color:orange">Do-While loop</h2>
-<p>The Java do-while loop is used to iterate a part of the program several times. If the number of iteration is not fixed and you must have to execute the loop at least once, it is recommended to use do-while loop.
-<br></br>
-The Java do-while loop is executed at least once because condition is checked after loop body.</p>
-<b>Syntax</b>
-<pre style="prettyprint">
-<span>do</span>
+<div>
+<h2 style="color:orange">Association in java</h2>
+<p>
+Association in Java is a connection between two separate classes that is set up through their objects. Although, Java association can balance, one-to-one, one-to-many, and many-to-many relationships. It defines the multiplicity between objects.
+</p>
+<br>
+<span>There are two types of Association</span>
+<ul>
+<li>Aggregation</li>
+<li>Composition</li>
+</ul>
+
+<pre class="prettyprint">
+<span>class&nbsp;Teacher</span>
 <span>{</span>
-<span>&nbsp;//code block to be executed</span>
-<span>}while(condition)</span>
-   </pre>
+<span>private String name;</span>
+<span>Teacher(String name){</span>
+<span>this.name = name;</span>
+<span>}</span>
+<span>public&nbsp;String&nbsp;getTeacherName()</span>
+<span>{</span>
+<span>return this.name;</span>
+<span>}</span>
+<span>}</span>
+<span>class&nbsp;Student{</span>
+<span>private&nbsp;String&nbsp;name;</span>
+<span>Student(String name){</span> 	
+<span>{</span>
+<span>this.name = name;</span>
+<span>}</span>
+<span>public&nbsp;String&nbsp;getStudentName()</span>
+<span>{</span>
+<span> return this.name;</span>
+<span>}</span>
+<span>}</span>
+<span>class&nbsp;AssociationDemo</span>
+<span>{</span>
+<span>public&nbsp;static&nbsp;void&nbsp;main (String[] args)</span>
+<span>{</span>
+<span>Teacher teacherObj = new Teacher("Rahul Sir");</span>
+<span>Student studentObj = new Student("Renuka");</span>
+<span>    System.out.println(studentObj.getStudentName() +
+        " is Student of " + teacherObj.getTeacherName());</span>
+
+<span>}</span>
+<span>}</span>
+</pre>
+<b>Output:</b>Renuka is a student of Rahul Sir
 </div>
 <div>
-<h4>Flow diagram</h4>
-<div align="center">
-<img  src="../images/do_while.jpeg" class="responsive">
-</div>
-<h4>Example</h4>
-<pre style="prettyprint">
-<span>class&nbsp;DoWhileLoopExample&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i=10;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("value of i: " + i );</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("\n");</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }while( i < 20 );</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-   </pre>
-   <b>Output</b>
-    <pre style="prettyprint">
-<span>value of i : 10</span>
-<span>value of i : 11</span>
-<span>value of i : 12</span>
-<span>value of i : 13</span>
-<span>value of i : 14</span>
-<span>value of i : 15</span>
-<span>value of i : 16</span>
-<span>value of i : 17</span>
-<span>value of i : 18</span>
-<span>value of i : 19</span>
-   </pre>
-</div>
-<div>
-<h4>Java Infinitive do-while Loop</h4>
-<pre style="prettyprint">
-<span>class&nbsp;DoWhileLoopExampleInfinitive&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("infinitive do while loop");</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }while(true);</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-</pre>
-<b>Output:</b>
-   <pre style="prettyprint">
-<span>infinitive do while loop</span>
-<span>infinitive do while loop</span>
-<span>infinitive do while loop</span>
-<span>infinitive do while loop</span>
-<span>ctrl+c</span>
-</pre>
-<p>You need to press ctrl+c to exit the window</p>
+<br>
+<span><strong>Composition:</strong>This is a restricted form of Java aggregation that is the quantities are highly dependent on each other. It represents a part-of relationship. One entity cannot exist without the other. Composition in Java represents a one-to-many relationship.</span>
+<span> For e.g. Human and Heart. A human needs heart to live and a heart needs a Human body to survive. In other words when the classes (entities) are dependent on each other and their life span are same (if one dies then another one too) then its a composition. Heart class has no sense if Human class is not present.</span>
 </div>
   <div class="text" style="margin-top:50px">
-    <button type="button" value="Login" style="float:left" class="button button1"><a href="while.html">previous</a></button>
-    <button type="button" value="Login" style="float:right" class="button button1"><a href="break.html">Next</a></button>
+    <button type="button" value="Login" style="float:left" class="button button1"><a href="constructor.html">previous</a></button>
+    <button type="button" value="Login" style="float:right" class="button button1"><a href="type_inhertance.html">Next</a></button>
   </div>
   
   </div>

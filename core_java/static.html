@@ -80,7 +80,7 @@
   </div>
   
     <div><h3 style="padding:10px"> OOPs Concept</h3>
-     <ul>
+    <ul>
   <li ><a href="oops.html" >OOPs Concept</a></li>
   <li ><a href="constructor.html">Constructor</a></li>
   <li ><a href="static.html">Static keyword</a></li>
@@ -128,74 +128,49 @@
   </div>
   <div class="middlepane" >
 <div>
-<h2 style="color:orange">Do-While loop</h2>
-<p>The Java do-while loop is used to iterate a part of the program several times. If the number of iteration is not fixed and you must have to execute the loop at least once, it is recommended to use do-while loop.
-<br></br>
-The Java do-while loop is executed at least once because condition is checked after loop body.</p>
-<b>Syntax</b>
-<pre style="prettyprint">
-<span>do</span>
-<span>{</span>
-<span>&nbsp;//code block to be executed</span>
-<span>}while(condition)</span>
-   </pre>
-</div>
 <div>
-<h4>Flow diagram</h4>
-<div align="center">
-<img  src="../images/do_while.jpeg" class="responsive">
-</div>
-<h4>Example</h4>
-<pre style="prettyprint">
-<span>class&nbsp;DoWhileLoopExample&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i=10;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("value of i: " + i );</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("\n");</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }while( i < 20 );</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-   </pre>
-   <b>Output</b>
-    <pre style="prettyprint">
-<span>value of i : 10</span>
-<span>value of i : 11</span>
-<span>value of i : 12</span>
-<span>value of i : 13</span>
-<span>value of i : 14</span>
-<span>value of i : 15</span>
-<span>value of i : 16</span>
-<span>value of i : 17</span>
-<span>value of i : 18</span>
-<span>value of i : 19</span>
-   </pre>
-</div>
-<div>
-<h4>Java Infinitive do-while Loop</h4>
-<pre style="prettyprint">
-<span>class&nbsp;DoWhileLoopExampleInfinitive&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("infinitive do while loop");</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }while(true);</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-</pre>
-<b>Output:</b>
-   <pre style="prettyprint">
-<span>infinitive do while loop</span>
-<span>infinitive do while loop</span>
-<span>infinitive do while loop</span>
-<span>infinitive do while loop</span>
-<span>ctrl+c</span>
-</pre>
-<p>You need to press ctrl+c to exit the window</p>
+<h2 style="color:orange">Static Keyword</h2>
+<p><em>static</em> is a non-access modifier in Java which is applicable for the following:</p>
+<ol>
+<ul>
+<li>blocks</li>
+<li>variables</li>
+<li>methods</li>
+<li>nested classes</li>
+</ul>
+
+</ol>
+<ol>
+<br>
+<hr></hr>
+<li><strong>Java static variable:</strong>If you declare any variable as static, it is known as a static variable.
+<ul>
+<li>The static variable can be used to refer to the common property of all objects (which is not unique for each object), for example, the company name of employees, college name of students, etc.</li>
+<li>The static variable gets memory only once in the class area at the time of class loading.</li>
+</ul>
+</li>
+<br>
+<hr></hr>
+<li><strong>Java static method:</strong>If we apply static keyword with any method, it is known as static method.
+<ul>
+<li>A static method belongs to the class rather than the object of a class.</li>
+<li>A static method can be invoked without the need for creating an instance of a class.</li>
+<li>A static method can access static data member and can change the value of it.</li>
+</ul>
+</li>
+<br>
+<hr></hr>
+<li><strong>Java static block</strong>
+<ul>
+<li>Is used to initialize the static data member.</li>
+<li>It is executed before the main method at the time of classloading.</li>
+</ul>
+</li>
+</ol>
 </div>
   <div class="text" style="margin-top:50px">
-    <button type="button" value="Login" style="float:left" class="button button1"><a href="while.html">previous</a></button>
-    <button type="button" value="Login" style="float:right" class="button button1"><a href="break.html">Next</a></button>
+    <button type="button" value="Login" style="float:left" class="button button1"><a href="constructor.html">previous</a></button>
+    <button type="button" value="Login" style="float:right" class="button button1"><a href="type_inhertance.html">Next</a></button>
   </div>
   
   </div>
