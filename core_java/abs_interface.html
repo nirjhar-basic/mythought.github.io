@@ -18,7 +18,13 @@
 <link  rel="stylesheet" href="../header.css">
 <link rel="stylesheet" href="break.css">
 
-
+<style>
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+</style>
 <title>Core Java</title>
 
 
@@ -50,31 +56,7 @@
 <div class="row">
 <div class="leftpane">
   <div><h3 style="padding:10px">Java Tutorial</h3>
-     <ul>
-  <li ><a href="core_java_intro.html">Introduction</a></li>
-  <li ><a href="core_java-jvm.html">JVM-Java  Virtual Machine</a></li>
-  <li ><a href="first_prog.html">First Java Program</a></li>
-  <li><a  href="obj_class.html">Object and classes</a></li>
-  <li ><a href="variables.html">Variables</a></li>
-  <li ><a href="data_types.html">Data Type</a></li>
-  <li ><a href="operators.html">Operator</a></li>
-</ul> 
-  </div>
-  <div><h3 style="padding:10px"> Java Control Statement</h3>
-     <ul>
-  <li ><a href="if_else.html" >If-else</a></li>
-  <li ><a href="switch.html">Switch</a></li>
-  <li ><a href="for.html">For loop</a></li>
-  <li ><a href="while.html">While loop</a></li>
-  <li><a  href="do-while.html">Do while loop</a></li>
-  <li ><a href="break.html">Break</a></li>
-  <li ><a href="continue.html">Continue</a></li>
-
-</ul> 
-  </div>
-  
-    <div><h3 style="padding:10px"> OOPs Concept</h3>
-        <ul>
+         <ul>
   <li ><a href="oops.html" >OOPs Concept</a></li>
   <li ><a href="constructor.html">Constructor</a></li>
   <li ><a href="static.html">Static keyword</a></li>
@@ -100,6 +82,37 @@
 	<li ><a href="static_import.html">Static import</a></li>
 </ul> 
   </div>
+  
+    <div><h3 style="padding:10px"> OOPs Concept</h3>
+    <ul>
+  <li ><a href="oops.html" >OOPs Concept</a></li>
+  <li ><a href="constructor.html">Constructor</a></li>
+  <li ><a href="static.html">Static keyword</a></li>
+  <li ><a href="inheritance.html">Inheritance</a></li>
+  <li><a  href="type_inhertance.html">Types of Inheritance</a></li>
+  <li ><a href="association.html">Association</a></li>
+  <li ><a href="aggregation.html">Aggregation</a></li>
+  <li ><a href="polymorphism.html">Polymorphism</a></li>
+  <li ><a href="method_overloading.html">Method Overloading</a></li>
+  <li ><a href="method_overriding.html">Method Overriding</a></li>
+  <li ><a href="overloading_vs_overriding.html">Overloading vs Overriding</a></li>
+  <li ><a href="super.html">Super keyword</a></li>
+  <li ><a href="type_polymorphism.html.html">Types of polymorphism</a></li>
+  <li ><a href="static_dynamic.html">Static and dymanic binding</a></li>
+  <li ><a href="abs_class_methods.html.html">Abstract class and methods</a></li>
+  <li ><a href="interface.html">Interface</a></li>
+  <li ><a href="Home.html">Abstract class vs Interface</a></li>
+  <li ><a href="Home.html">Encapsulation</a></li>
+  <li ><a href="Home.html">Packages</a></li>
+  <li ><a href="Home.html">Access modifiers</a></li>
+  <li ><a href="Home.html">Garbage Collection</a></li>
+  <li ><a href="Home.html">Inner classes</a></li>
+	<li ><a href="Home.html">Static import</a></li>
+	<li ><a href="Home.html">Garbage Collection</a></li>
+	<li ><a href="Home.html">Static Constructor</a></li>
+	<li ><a href="Home.html">Interview Questions</a></li>
+</ul> 
+  </div>
     <div><h3 style="padding:10px"> Some Advance Concepts</h3>
      <ul>
   <li ><a href="Home.html" >Java 8 features</a></li>
@@ -118,26 +131,27 @@
   </div>
   </div>
   <div class="middlepane" >
+  <h2 style="color:orange">Abstract class vs interface</h2>
+  <span>Following are the major differences between them</span>
+  <ol>
+  <li>Main difference is methods of a Java interface are implicitly abstract and cannot have implementations. A Java abstract class can have instance methods that implements a default behavior.</li>
+  <li>Variables declared in a Java interface is by default final. An  abstract class may contain non-final variables.</li>
+<li>Members of a Java interface are public by default. A Java abstract class can have the usual flavors of class members like private, protected, etc..</li>
+  <li>Java interface should be implemented using keyword “implements”; A Java abstract class should be extended using keyword “extends”.</li>
+  <li>An interface can extend another Java interface only, an abstract class can extend another Java class and implement multiple Java interfaces.</li>
+  <li>A Java class can implement multiple interfaces but it can extend only one abstract class.</li>
+  <li>Interface is absolutely abstract and cannot be instantiated; A Java abstract class also cannot be instantiated, but can be invoked if a main() exists.</li>
+  <li>In comparison with java abstract classes, java interfaces are slow as it requires extra indirection.</li>
+  </ol>
 <div>
-<h2 style="color:orange">Overloading vs overriding in java</h2>
-<ul>
-<li>Overloading happens at compile-time while Overriding happens at runtime: The binding of overloaded method call to its definition has happens at compile-time however binding of overridden method call to its definition happens at runtime.</li>
-<li>Static methods can be overloaded which means a class can have more than one static method of same name. Static methods cannot be overridden, even if you declare a same static method in child class it has nothing to do with the same method of parent class.</li>
-<li>The most basic difference is that overloading is being done in the same class while for overriding base and child classes are required. Overriding is all about giving a specific implementation to the inherited method of parent class.</li>
-<li>Static binding is being used for overloaded methods and dynamic binding is being used for overridden/overriding methods.</li>
-<li>Performance: Overloading gives better performance compared to overriding. The reason is that the binding of overridden methods is being done at runtime.</li>
-<li>private and final methods can be overloaded but they cannot be overridden. It means a class can have more than one private/final methods of same name but a child class cannot override the private/final methods of their base class.</li>
-<li>Return type of method does not matter in case of method overloading, it can be same or different. However in case of method overriding the overriding method can have more specific return type.</li>
-<li>Argument list should be different while doing method overloading. Argument list should be same in method Overriding.</li>
-</ul>
 
-</div>
   <div class="text" style="margin-top:50px">
-    <button type="button" value="Login" style="float:left" class="button button1"><a href="aggregation.html">previous</a></button>
-    <button type="button" value="Login" style="float:right" class="button button1"><a href="method_overloading.html">Next</a></button>
+    <button type="button" value="Login" style="float:left" class="button button1"><a href="interface.html">previous</a></button>
+    <button type="button" value="Login" style="float:right" class="button button1"><a href="encapsulation.html">Next</a></button>
   </div>
   
   </div>
+  
    <div class="rightpane">
 </div>
 </div>

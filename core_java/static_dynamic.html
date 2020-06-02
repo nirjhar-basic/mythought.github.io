@@ -16,15 +16,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <link  rel="stylesheet" href="../header.css">
-<link rel="stylesheet" href="continue.css">
+<link rel="stylesheet" href="break.css">
 
-
+<style>
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+</style>
 <title>Core Java</title>
 
 
 </head>
 
 <body >
+
 <nav class="navbar navbar-expand-sm  bg-success navbar-light ">
   <a class="navbar-brand" href="../index.html">BasicConcepts</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -48,8 +55,7 @@
 <div class="container-fluid">
 <div class="row">
 <div class="leftpane">
-
-<div><h3 style="padding:10px">Java Tutorial</h3>
+  <div><h3 style="padding:10px">Java Tutorial</h3>
      <ul>
   <li ><a href="core_java_intro.html">Introduction</a></li>
   <li ><a href="core_java-jvm.html">JVM-Java  Virtual Machine</a></li>
@@ -69,10 +75,12 @@
   <li><a  href="do-while.html">Do while loop</a></li>
   <li ><a href="break.html">Break</a></li>
   <li ><a href="continue.html">Continue</a></li>
+
 </ul> 
   </div>
-   <div><h3 style="padding:10px"> OOPs Concept</h3>
-            <ul>
+  
+    <div><h3 style="padding:10px"> OOPs Concept</h3>
+        <ul>
   <li ><a href="oops.html" >OOPs Concept</a></li>
   <li ><a href="constructor.html">Constructor</a></li>
   <li ><a href="static.html">Static keyword</a></li>
@@ -98,7 +106,7 @@
 	<li ><a href="static_import.html">Static import</a></li>
 </ul> 
   </div>
-  <div><h3 style="padding:10px">Some Advance Concepts</h3>
+    <div><h3 style="padding:10px"> Some Advance Concepts</h3>
      <ul>
   <li ><a href="Home.html" >Java 8 features</a></li>
   <li ><a href="Home.html">Java 9 features</a></li>
@@ -114,71 +122,81 @@
   <li ><a href="Home.html">Java Annotations</a></li>
 </ul> 
   </div>
-   </div>
-  <div class="middlepane">
-    <div>
-<h2 >Continue statement</h2>
-<p>Continue statement is mostly used inside loops. Whenever it is encountered inside a loop, control directly jumps to the beginning of the loop for next iteration, skipping the execution of statements inside loop’s body for the current iteration. This is particularly useful when you want to continue the loop but do not want the rest of the statements(after continue statement) in loop body to execute for that particular iteration.
-</p>
-<b>Syntax</b>
-<pre style="prettyprint">
-<span>continue;</span>
-   </pre>
-   </div>
-<div>
-<h3>Example: continue statement inside for loop</h3>
-<pre style="prettyprint">
-<span>class&nbsp;ContinueStatement1&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (i =0; i<=10; i++){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(Value is "+i);</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (i==2){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(i+" ");</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;}</span>
-   </pre>
- <b>Output</b>
- <pre style="prettyprint">
-<span>0 1 3 4 5 6 7 8 9 10</span>
-   </pre>
-</div>
-<div>
-<h3>Example: continue statement inside while loop</h3>
-<pre style="prettyprint">
-<span>class&nbsp;BreakStatement2&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (i <=10){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(Value is "+i);</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (i==2){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(i+" ");</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;}</span>
-   </pre>
-    <b>Output</b>
- <pre style="prettyprint">
-<span>0 1 3 4 5 6 7 8 9 10</span>
-   </pre>
   </div>
+  <div class="middlepane" >
+  <h2 style="color:orange">Type of polymorphism</h2>
+   <p>There are two types of polymorphism in java:</p>
+   <ul>
+   <li>Static Polymorphism also known as compile time polymorphism</li>
+   <li>Dynamic Polymorphism also known as runtime polymorphism</li>
+   </ul>
+   <h3>Compile time Polymorphism (or Static polymorphism)</h3>
+   <p>Polymorphism that is resolved during compiler time is known as static polymorphism. Method overloading is an example of compile time polymorphism.</p>
+   <h5>Example:</h5>
+   <pre class="prettyprint">
+   <span>class Demo {</span>
+   <span>&nbsp;&nbsp;&nbsp;public void displayPattern(){</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i < 10; i++) {</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print("*");</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+   <span>&nbsp;&nbsp;}</span>
+   <span>&nbsp;&nbsp;&nbsp;public void displayPattern(char symbol){</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i < 10; i++) {</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(symbol);</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+   <span>&nbsp;&nbsp;}</span>
+   <span>}</span>
+   <span>class Main {</span>
+   <span>&nbsp;&nbsp;public static void main(String[] args) {</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;Demo d1 = new Demo();</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;d1.displayPattern();</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;d1.displayPattern('#');</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+   <span>&nbsp;&nbsp;}</span>
+   </pre>
+   <br>
+   <h5>Output:</h5>
+   <pre class="prettyprint">
+   <span>**********</span>
+   <span>##########</span>
+   </pre>
+   <h3>Runtime Polymorphism (or Dynamic polymorphism)</h3>
+   <p>It is also known as Dynamic Method Dispatch. Dynamic polymorphism is a process in which a call to an overridden method is resolved at runtime, thats why it is called runtime polymorphism. </p>
+      <pre class="prettyprint">
+   <span>class ABC {</span>
+   <span>&nbsp;&nbsp;&nbsp;public void myMethod(){</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Overridden Method");</span>
+   <span>&nbsp;&nbsp;}</span>
+   <span>}</span>
+   <span>class Xyz extends ABC {</span>
+   <span>&nbsp;&nbsp;&nbsp;public void myMethod(){</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Overridden Method");</span>
+   <span>&nbsp;&nbsp;}</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ABC obj = new XYZ();</span>
+   <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;obj.myMethod();</span>
+   <span>&nbsp;&nbsp;}</span>
+   <span>}</span>
+   </pre>
+   <h5>Output:</h5>
+   <pre class="prettyprint">
+   <span>Overriding Method</span>
+   </pre>
+<div>
 
   <div class="text" style="margin-top:50px">
-    <button type="button" value="Login" style="float:left" class="button button1"><a href="break.html">previous</a></button>
-    <button type="button" value="Login" style="float:right" class="button button1"><a href="core_java_intro.html">Next</a></button>
+    <button type="button" value="Login" style="float:left" class="button button1"><a href="super.html">previous</a></button>
+    <button type="button" value="Login" style="float:right" class="button button1"><a href="static_dynamic.html">Next</a></button>
   </div>
+  
   </div>
-  <div class="rightpane">
-   </div>
+  
+   <div class="rightpane">
+</div>
+</div>
 </div>
 </div>
 </section>
+
 </body>
 </html>

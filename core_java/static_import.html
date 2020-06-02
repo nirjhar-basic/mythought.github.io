@@ -16,15 +16,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <link  rel="stylesheet" href="../header.css">
-<link rel="stylesheet" href="continue.css">
+<link rel="stylesheet" href="break.css">
 
-
+<style>
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+</style>
 <title>Core Java</title>
 
 
 </head>
 
 <body >
+
 <nav class="navbar navbar-expand-sm  bg-success navbar-light ">
   <a class="navbar-brand" href="../index.html">BasicConcepts</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -48,8 +55,7 @@
 <div class="container-fluid">
 <div class="row">
 <div class="leftpane">
-
-<div><h3 style="padding:10px">Java Tutorial</h3>
+  <div><h3 style="padding:10px">Java Tutorial</h3>
      <ul>
   <li ><a href="core_java_intro.html">Introduction</a></li>
   <li ><a href="core_java-jvm.html">JVM-Java  Virtual Machine</a></li>
@@ -69,10 +75,12 @@
   <li><a  href="do-while.html">Do while loop</a></li>
   <li ><a href="break.html">Break</a></li>
   <li ><a href="continue.html">Continue</a></li>
+
 </ul> 
   </div>
-   <div><h3 style="padding:10px"> OOPs Concept</h3>
-            <ul>
+  
+    <div><h3 style="padding:10px"> OOPs Concept</h3>
+       <ul>
   <li ><a href="oops.html" >OOPs Concept</a></li>
   <li ><a href="constructor.html">Constructor</a></li>
   <li ><a href="static.html">Static keyword</a></li>
@@ -98,7 +106,7 @@
 	<li ><a href="static_import.html">Static import</a></li>
 </ul> 
   </div>
-  <div><h3 style="padding:10px">Some Advance Concepts</h3>
+    <div><h3 style="padding:10px"> Some Advance Concepts</h3>
      <ul>
   <li ><a href="Home.html" >Java 8 features</a></li>
   <li ><a href="Home.html">Java 9 features</a></li>
@@ -114,71 +122,73 @@
   <li ><a href="Home.html">Java Annotations</a></li>
 </ul> 
   </div>
-   </div>
-  <div class="middlepane">
-    <div>
-<h2 >Continue statement</h2>
-<p>Continue statement is mostly used inside loops. Whenever it is encountered inside a loop, control directly jumps to the beginning of the loop for next iteration, skipping the execution of statements inside loop’s body for the current iteration. This is particularly useful when you want to continue the loop but do not want the rest of the statements(after continue statement) in loop body to execute for that particular iteration.
-</p>
-<b>Syntax</b>
-<pre style="prettyprint">
-<span>continue;</span>
-   </pre>
-   </div>
-<div>
-<h3>Example: continue statement inside for loop</h3>
-<pre style="prettyprint">
-<span>class&nbsp;ContinueStatement1&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (i =0; i<=10; i++){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(Value is "+i);</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (i==2){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(i+" ");</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;}</span>
-   </pre>
- <b>Output</b>
- <pre style="prettyprint">
-<span>0 1 3 4 5 6 7 8 9 10</span>
-   </pre>
-</div>
-<div>
-<h3>Example: continue statement inside while loop</h3>
-<pre style="prettyprint">
-<span>class&nbsp;BreakStatement2&nbsp;{</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void main(String args[]){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (i <=10){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(Value is "+i);</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (i==2){</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print(i+" ");</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;</span>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;&nbsp;&nbsp;}</span>
-<span>&nbsp;}</span>
-   </pre>
-    <b>Output</b>
- <pre style="prettyprint">
-<span>0 1 3 4 5 6 7 8 9 10</span>
-   </pre>
   </div>
+  <div class="middlepane" >
+  <h2 style="color:orange">Static import</h2>
+<p>Static import allows you to access the static member of a class directly without using the fully qualified name.
+<br>
+To understand this topic, you should have the knowledge of packages in Java. Static imports are used for saving your time by making you type less. If you hate to type same thing again and again then you may find such imports interesting.</p>
+<h4>Without Static Imports</h4>
+<pre class="prettyprint">
+<p>
+class Demo1{
+   public static void main(String args[])
+   {
+      double var1= Math.sqrt(5.0);
+      double var2= Math.tan(30);
+      System.out.println("Square of 5 is:"+ var1);
+      System.out.println("Tan of 30 is:"+ var2);
+   }
+}
+</pre>
+<h5>Output:</h5>
+<pre class="prettyprint">
+<p>
+Square of 5 is:2.23606797749979
+Tan of 30 is:-6.405331196646276
+</pre>
+<h4>With Static Imports</h4>
+<pre class="prettyprint">
+<p>
+import static java.lang.System.out;
+import static java.lang.Math.*;
+class Demo2{
+   public static void main(String args[])
+   {
+      //instead of Math.sqrt need to use only sqrt
+      double var1= sqrt(5.0);
+      //instead of Math.tan need to use only tan
+      double var2= tan(30);
+      //need not to use System in both the below statements
+      out.println("Square of 5 is:"+var1);
+      out.println("Tan of 30 is:"+var2);
+   }
+}
+</p>
+</pre>
+<h5>Output:</h5>
+<pre class="prettyprint">
+<p>
+Square of 5 is:2.23606797749979
+Tan of 30 is:-6.405331196646276
+</pre>
+
+
+<div>
 
   <div class="text" style="margin-top:50px">
-    <button type="button" value="Login" style="float:left" class="button button1"><a href="break.html">previous</a></button>
+    <button type="button" value="Login" style="float:left" class="button button1"><a href="packages.html">previous</a></button>
     <button type="button" value="Login" style="float:right" class="button button1"><a href="core_java_intro.html">Next</a></button>
   </div>
+  
   </div>
-  <div class="rightpane">
-   </div>
+  
+   <div class="rightpane">
+</div>
+</div>
 </div>
 </div>
 </section>
+
 </body>
 </html>
